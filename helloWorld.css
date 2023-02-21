@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: rgb(32, 0, 58);
+  --secondary-color: rgb(120, 78, 159);
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+img {
+  transition: 0.25s;
+}
+
+img:not(.user-image) {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img:not(.user-image):hover {
+  transform: scale(1.5);
+}
+
+img.user-image:hover {
+  transform: scale(1.2);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+body main {
+  padding: 80px 60px;
+  background-color: var(--secondary-color);
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  column-gap: 30px;
+
+  position: relative;
+}
+
+body main .fake-icons {
+  display: flex;
+  column-gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 10px;
+}
+
+body main .fake-icons div[class^=fake-icon] {
+  display: flex;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+body main .fake-icons div[class^=fake-icon]:hover {
+  background-color: orangered;
+}
+
+body main > img {
+  width: 180px;
+  height: 180px; 
+  border-radius: 50%;
+}
+
+body main .user-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+body main .user-info .user-data {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  color: var(--primary-color);
+}
+
+body main .user-info .user-social-media ul {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+
+body main .user-info .user-social-media ul li a img[title]:hover .tooltip {
+  background: orangered;
+}

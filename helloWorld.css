@@ -26,6 +26,7 @@ img:not(.user-image) {
 
 img:not(.user-image):hover {
   transform: scale(1.5);
+  filter: invert(60%) sepia(288%) saturate(7.5);
 }
 
 img.user-image:hover {
@@ -71,7 +72,7 @@ body main .fake-icons div[class^=fake-icon] {
 }
 
 body main .fake-icons div[class^=fake-icon]:hover {
-  background-color: orangered;
+  filter: invert(60%) sepia(288%) saturate(7.5);
 }
 
 body main > img {
@@ -89,10 +90,14 @@ body main .user-info {
 body main .user-info .user-data {
   display: flex;
   flex-direction: column;
-  font-style: normal;
-  font-family: Roboto, sans-serif;
-  font-weight: lighter;
+}
+
+body main .user-info .user-data h1, 
+body main .user-info .user-data h2 {
   color: var(--primary-color);
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body main .user-info .user-social-media ul {
@@ -103,5 +108,5 @@ body main .user-info .user-social-media ul {
 
 
 body main .user-info .user-social-media ul li a img[title]:hover .tooltip {
-  background: orangered;
+  filter: invert(60%) sepia(288%) saturate(7.5);
 }
